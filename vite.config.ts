@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react';
 // Change this if you rename the repo, or set to "/" when using <username>.github.io.
 export default defineConfig({
   plugins: [react()],
-  base: '/sourav-site/',
+  base: '/',
 });
