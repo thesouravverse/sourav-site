@@ -60,13 +60,13 @@ export const apps: AppCard[] = [
   },
 ];
 
-// Drop in YouTube video IDs (the part after v=).
+// Drop in YouTube video IDs (the part after v= or after youtu.be/).
 export const youtubeVideoIds: string[] = [
-  // 'dQw4w9WgXcQ',
+  'VFuPbM7J4g8',
 ];
 
-// Instagram requires an embed URL per post, like:
-// https://www.instagram.com/p/SHORTCODE/
+// Instagram requires an embed URL per post or reel, like:
+// https://www.instagram.com/p/SHORTCODE/  or  https://www.instagram.com/reel/SHORTCODE/
 export const instagramPostUrls: string[] = [
-  // 'https://www.instagram.com/p/Cxxxxxxxx/',
+  'https://www.instagram.com/reel/DX_64F1RiEG/',
 ];
