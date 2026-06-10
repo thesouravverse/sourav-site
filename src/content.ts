@@ -60,9 +60,28 @@ export const apps: AppCard[] = [
   },
 ];
 
-// Drop in YouTube video IDs (the part after v= or after youtu.be/).
-export const youtubeVideoIds: string[] = [
-  'VFuPbM7J4g8',
+// YouTube videos. Each video can have an optional title and description.
+// Get the ID from the URL: youtu.be/<ID> or youtube.com/watch?v=<ID>
+export type YouTubeVideo = {
+  id: string;
+  title?: string;
+  description?: string;
+};
+
+export const youtubeVideos: YouTubeVideo[] = [
+  {
+    id: 'Nn8HzhVWUGA',
+    title: 'The Oldest Unsolved Murder on Earth',
+    description: 'Ötzi the Iceman — a 5,300-year-old cold case still missing a killer.',
+  },
+  {
+    id: 'DjPkWvmIv9Y',
+    title: "Why Your Raise Doesn't Feel Like a Raise",
+    description: 'The 3 invisible taxes quietly eating your paycheck.',
+  },
+  {
+    id: 'VFuPbM7J4g8',
+  },
 ];
 
 // Instagram requires an embed URL per post or reel, like:

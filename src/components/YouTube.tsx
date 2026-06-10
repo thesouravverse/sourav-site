@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Youtube as YoutubeIcon } from 'lucide-react';
-import { profile, youtubeVideoIds } from '../content';
+import { profile, youtubeVideos } from '../content';
 import { SectionLabel } from './About';
 
 export default function YouTube() {
@@ -19,22 +19,22 @@ export default function YouTube() {
         </a>
       </div>
 
-      {youtubeVideoIds.length === 0 ? (
+      {youtubeVideos.length === 0 ? (
         <Placeholder
           icon={<YoutubeIcon size={32} />}
           title="Add your videos"
           body={
             <>
               Edit <code className="rounded bg-white/10 px-1.5 py-0.5">src/content.ts</code> and
-              drop YouTube video IDs into <code className="rounded bg-white/10 px-1.5 py-0.5">youtubeVideoIds</code>.
+              add entries to <code className="rounded bg-white/10 px-1.5 py-0.5">youtubeVideos</code>.
             </>
           }
         />
       ) : (
         <div className="grid gap-6 sm:grid-cols-2">
-          {youtubeVideoIds.map((id, i) => (
+          {youtubeVideos.map((v, i) => (
             <motion.div
-              key={id}
+              key={v.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-80px' }}
@@ -44,12 +44,22 @@ export default function YouTube() {
               <div className="aspect-video">
                 <iframe
                   className="h-full w-full"
-                  src={`https://www.youtube.com/embed/${id}`}
-                  title="YouTube video"
+                  src={`https://www.youtube.com/embed/${v.id}`}
+                  title={v.title ?? 'YouTube video'}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 />
               </div>
+              {(v.title || v.description) && (
+                <div className="p-5">
+                  {v.title && (
+                    <h3 className="text-lg font-semibold leading-snug">{v.title}</h3>
+                  )}
+                  {v.description && (
+                    <p className="mt-1.5 text-sm text-white/60">{v.description}</p>
+                  )}
+                </div>
+              )}
             </motion.div>
           ))}
         </div>
