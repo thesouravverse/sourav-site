@@ -7,7 +7,7 @@ export const profile = {
   bio: `I build small, useful Android apps and shoot AI-driven short films.
         Currently obsessed with shipping fast and turning ideas into installable things on the Play Store.`,
   location: 'India',
-  email: 'replace-me@example.com',
+  email: 'thesouravverse@gmail.com',
   socials: {
     instagram: 'https://www.instagram.com/the.sourav_verse',
     youtube: 'https://youtube.com/@the.sourav_verse',
@@ -52,10 +52,11 @@ export const apps: AppCard[] = [
     accent: 'from-emerald-500 to-teal-500',
   },
   {
-    name: 'Flowchart',
-    blurb: 'A web tool to think in flows — boxes, arrows, and the occasional eureka.',
-    tags: ['Web', 'React', 'Vite'],
-    emoji: '🔁',
+    name: 'Quick PDF',
+    blurb: '100% offline PDF toolbox for Android. No accounts, no internet, no tracking.',
+    tags: ['Android', 'Kotlin', 'Compose'],
+    link: 'https://github.com/thesouravverse/PDFToolbox',
+    emoji: '📄',
     accent: 'from-pink-500 to-rose-500',
   },
 ];
@@ -81,6 +82,8 @@ export const youtubeVideos: YouTubeVideo[] = [
   },
   {
     id: 'VFuPbM7J4g8',
+    title: 'A Bored Monk Invented Your 9-to-5 (1,500 Years Ago)',
+    description: 'How a medieval monastery accidentally designed the modern work week.',
   },
 ];
 
