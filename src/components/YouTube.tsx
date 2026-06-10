@@ -8,8 +8,13 @@ export default function YouTube() {
     <section id="youtube" className="py-24">
       <SectionLabel>youtube</SectionLabel>
       <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
-        <h2 className="text-4xl font-bold sm:text-5xl">From the channel</h2>
-        <a
+        <div>
+          <h2 className="text-4xl font-bold sm:text-5xl">From the channel</h2>
+          <p className="mt-2 text-sm font-medium uppercase tracking-[0.2em] text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-rose-400 to-fuchsia-500">
+            Papercut animator
+          </p>
+        </div>
+        <aa
           href={profile.socials.youtube}
           target="_blank"
           rel="noreferrer"
