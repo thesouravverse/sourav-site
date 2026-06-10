@@ -90,5 +90,8 @@ export const youtubeVideos: YouTubeVideo[] = [
 // Instagram requires an embed URL per post or reel, like:
 // https://www.instagram.com/p/SHORTCODE/  or  https://www.instagram.com/reel/SHORTCODE/
 export const instagramPostUrls: string[] = [
+  'https://www.instagram.com/reel/DYtvhp-RBrj/',
+  'https://www.instagram.com/reel/DYo-8H2RHYY/',
+  'https://www.instagram.com/reel/DYTSWo9xkN-/',
   'https://www.instagram.com/reel/DX_64F1RiEG/',
 ];
